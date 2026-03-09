@@ -4,15 +4,19 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody PlayerRB;
     
+    [SerializeField] private float JumpForce = 100f;
+    [SerializeField] private float GravityModifier = 1f;
+    
     private void Start()
     {
         PlayerRB = GetComponent<Rigidbody>();
+        Physics.gravity *= GravityModifier;
         //PlayerRB.AddForce(Vector3.up * 1000f);
     }
     
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            PlayerRB.AddForce(Vector3.up * 100f, ForceMode.Impulse);
+            PlayerRB.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
     }
 }
