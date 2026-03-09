@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Rigidbody PlayerRB;
+    
+    private void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        PlayerRB = GetComponent<Rigidbody>();
+        PlayerRB.AddForce(Vector3.up * 1000f);
     }
 }
