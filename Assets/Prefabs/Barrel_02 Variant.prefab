@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel_02 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 194656, guid: cb04eea70ee14ab49b68d12e2cbbf680, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 490414, guid: cb04eea70ee14ab49b68d12e2cbbf680, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -132,3 +136,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 30
+  PlayerControllerScript: {fileID: 0}
