@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float JumpForce = 100f;
     [SerializeField] private float GravityModifier = 1f;
     [SerializeField] private bool OnGround = false;
+    public bool GameOver = false;
     
     private void Start()
     {
@@ -28,5 +29,11 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
             OnGround = true;
+        else if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            GameOver = true;
+            Debug.Log("Game Over!");
+        }
+            
     }
 }
